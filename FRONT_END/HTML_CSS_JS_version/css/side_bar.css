@@ -1,0 +1,96 @@
+* ,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+
+.app-container {
+  display: flex;
+  min-height: 100vh;
+  font-family: sans-serif;
+}
+
+.app-sidebar {
+  flex: 1 1 0;
+  max-width: 300px;
+  padding: 2rem 0rem 1rem 1rem;
+  background-color: #2e3047;
+}
+
+.app-sidebar_title {
+  color: #707793;
+  font-size: 1.75rem;
+  padding-right: 2rem;
+}
+
+.app-sidebar .navigation {
+  padding: 1rem 0;
+}
+
+.navigation_item {
+  display: block;
+  padding: 1rem 0;
+  color: rgb(42, 233, 195);
+  text-decoration: none;
+  transition: 0.5s linea;
+  cursor: pointer;
+}
+
+.navigation_item:hover {
+  color: #fff;
+  border-right: 7px solid #fff;
+}
+
+.navigation_item.is__active {
+  color: #fff;
+  border-right: 7px solid #fff;
+}
+
+.app-sidebar_togler {
+    display: none;
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+    width: 60px;
+    height: 60px;
+    border-radius: 99px;
+    background-color: rgb(42, 233, 195);
+    cursor: pointer;
+}
+/* TODO:   Move to other css file*/
+.content {
+  flex: 1 1 0;
+  padding: 2rem;
+  background-color: #45475d;
+}
+
+/* TODO:   Changing indent from left border is not in one plase*/
+@media (max-width: 1024px) {
+  .app-sidebar {
+    max-width: 200px;
+  }
+}
+
+@media (max-width: 768px) {
+  .app-sidebar_togler {
+    display: block;
+	}
+  /* TODO:   Move to other css file*/
+    .content {
+		padding-top: 8rem;
+	}
+    .app-sidebar {
+		position: fixed;
+		top: 0;
+		left: -300px;
+		height: 100vh;
+		width: 100%;
+		max-width: 300px;
+		/* transition: 1s linear; */
+	}
+
+    .app-sidebar.is__active {
+        left: 0;
+    }
+}

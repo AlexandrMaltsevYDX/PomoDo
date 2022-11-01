@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <!-- <link rel="stylesheet" href="css/side_bar.css"> -->
+    <link rel="stylesheet" href="css/main.css">
+    <title>SideBar</title>
+</head>
+
+<body>
+
+    <div class="app-container">
+        <!-- nav-toggle -->
+        <div class="app-sidebar_togler">
+            <div class="app-sidebar_hamburger">
+                <span></span>
+            </div>
+        </div>
+
+        <!-- aside -->
+        <aside class="app-sidebar">
+            <h3 class="app-sidebar_title">PomoDO v.01</h3>
+
+            <nav class="navigation">
+                <a data-tab="1" class="navigation_item">TODO</a>
+                <a data-tab="2" class="navigation_item">Pomodoro</a>
+                <a data-tab="3" class="navigation_item">Projects</a>
+                <a data-tab="4" class="navigation_item">Statistics</a>
+                <a data-tab="5" class="navigation_item">Apearance</a>
+            </nav>
+
+        </aside>
+
+        <!-- main -->
+        <main class="content pages">
+            <section class="page is-active" data-page="1">
+                <h2>Page 1</h2>
+                <p>Welcome to the TODO page</p>
+            </section>
+            <section class="page" data-page="2">
+                <h2>Page 2</h2>
+                <p>Welcome to the Pomodoro page</p>
+            </section>
+            <section class="page" data-page="3">
+                <h2>Page 3</h2>
+                <p>Welcome to the Projects page</p>
+            </section>
+            <section class="page" data-page="4">
+                <h2>Page 4</h2>
+                <p>Welcome to the Statistics page</p>
+            </section>
+            <section class="page" data-page="5">
+                <h2>Page 5</h2>
+                <p>Welcome to the Apearance page</p>
+            </section>
+        </main>
+    </div>
+    <script  src='js/side_bar.js'></script>
+    <!-- <script>
+        const menu_toggle = document.querySelector('.app-sidebar_togler');
+        const sidebar = document.querySelector('.app-sidebar');
+
+        menu_toggle.addEventListener('click', () => {
+            menu_toggle.classList.toggle('is__active');
+            sidebar.classList.toggle('is__active');
+        });
+    </script> -->
+</body>
+
+</html>
